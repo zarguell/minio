@@ -1,0 +1,42 @@
+{
+  "assignees": [
+    "@echi"
+  ],
+  "baseBranches": [
+    "development"
+  ],
+  "packageRules": [
+    {
+      "datasources": ["docker"],
+      "packageNames": ["minio/minio"],
+      "versioning": "regex:^RELEASE\\.(?<major>\\d+)-(?<minor>\\d+)-(?<patch>\\d+)T.*Z(-(?<compatibility>.*))?$",
+      "major": {
+        "enabled": true
+      }
+    }
+  ],
+  "automerge": true,
+  "gitLabAutomerge": true,
+  "regexManagers": [
+    {
+      "fileMatch": [
+        "^hardening_manifest.yaml$"
+      ],
+      "matchStrings": [
+        "org\\.opencontainers\\.image\\.version:\\s+(\\s|\"|')?(?<currentValue>.+?)(\\s|\"|'|$)"
+      ],
+      "depNameTemplate": "minio/minio",
+      "datasourceTemplate": "docker"
+    },
+    {
+      "fileMatch": [
+        "^hardening_manifest.yaml$"
+      ],
+      "matchStrings": [
+        "tags:\\s+-(\\s|\"|')+(?<currentValue>.+?)(\\s|\"|'|$)+"
+      ],
+      "depNameTemplate": "minio/minio",
+      "datasourceTemplate": "docker"
+    }
+  ]
+}

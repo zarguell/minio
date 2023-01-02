@@ -1,0 +1,33 @@
+apiVersion: v1
+
+name: opensource/minio/minio
+
+tags:
+- RELEASE.2022-12-12T19-27-27Z
+- latest
+
+args:
+  BASE_IMAGE: redhat/ubi/ubi8
+  BASE_TAG: "8.7"
+
+labels:
+  org.opencontainers.image.title: minio
+  org.opencontainers.image.description: MinIO is a cloud storage server compatible
+    with Amazon S3.
+  org.opencontainers.image.licenses: APL-2.0
+  org.opencontainers.image.url: https://github.com/minio/minio
+  org.opencontainers.image.vendor: Minio
+  org.opencontainers.image.version: RELEASE.2022-12-12T19-27-27Z
+  mil.dso.ironbank.image.keywords: object,s3,storage
+  mil.dso.ironbank.image.type: opensource
+  mil.dso.ironbank.product.name: Minio
+
+resources:
+- tag: minio/minio:RELEASE.2022-12-12T19-27-27Z
+  url: docker://docker.io/minio/minio@sha256:8603af8179a16c804382d124c583689a511839310ed9e78070f41f4817f42e31
+
+maintainers:
+- email: ironbank@dsop.io
+  username: cadehuismann
+  name: Cade Huismann
+  cht_member: true
