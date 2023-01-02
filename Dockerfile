@@ -1,8 +1,8 @@
-ARG BASE_REGISTRY=registry1.dso.mil
-ARG BASE_IMAGE=ironbank/redhat/ubi/ubi8
-ARG BASE_TAG=8.7
+ARG BASE_REGISTRY=docker.io
+ARG BASE_IMAGE=zarguell/ubi8
+ARG BASE_TAG=latest
 
-FROM minio/minio:RELEASE.2022-12-12T19-27-27Z as base
+FROM minio/minio:latest as base
 
 FROM ${BASE_REGISTRY}/${BASE_IMAGE}:${BASE_TAG}
 
