@@ -3,7 +3,7 @@ apiVersion: v1
 name: opensource/minio/minio
 
 tags:
-- RELEASE.2023-03-20T20-16-18Z
+- RELEASE.2023-03-22T06-36-24Z
 - latest
 
 args:
@@ -17,14 +17,14 @@ labels:
   org.opencontainers.image.licenses: APL-2.0
   org.opencontainers.image.url: https://github.com/minio/minio
   org.opencontainers.image.vendor: Minio
-  org.opencontainers.image.version: RELEASE.2023-03-20T20-16-18Z
+  org.opencontainers.image.version: RELEASE.2023-03-22T06-36-24Z
   mil.dso.ironbank.image.keywords: object,s3,storage
   mil.dso.ironbank.image.type: opensource
   mil.dso.ironbank.product.name: Minio
 
 resources:
-- tag: minio/minio:RELEASE.2023-03-20T20-16-18Z
-  url: docker://docker.io/minio/minio@sha256:6d770d7f255cda1f18d841ffc4365cb7e0d237f6af6a15fcdb587480cd7c3b93
+- tag: minio/minio:RELEASE.2023-03-22T06-36-24Z
+  url: docker://docker.io/minio/minio@sha256:02b9d0234025a31b1fb2a52697b62a18a4fbd0db03cbd83dfc09fc48773b718c
 
 maintainers:
 - email: ironbank@dsop.io
