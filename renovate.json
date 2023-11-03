@@ -1,6 +1,7 @@
 {
   "assignees": [
-    "@echi"
+    "@ami0001",
+    "@colton.freeman"
   ],
   "baseBranches": [
     "development"
@@ -23,16 +24,7 @@
         "^hardening_manifest.yaml$"
       ],
       "matchStrings": [
-        "org\\.opencontainers\\.image\\.version:\\s+(\\s|\"|')?(?<currentValue>.+?)(\\s|\"|'|$)"
-      ],
-      "depNameTemplate": "minio/minio",
-      "datasourceTemplate": "docker"
-    },
-    {
-      "fileMatch": [
-        "^hardening_manifest.yaml$"
-      ],
-      "matchStrings": [
+        "org\\.opencontainers\\.image\\.version:\\s+(\\s|\"|')?(?<currentValue>.+?)(\\s|\"|'|$)",
         "tags:\\s+-(\\s|\"|')+(?<currentValue>.+?)(\\s|\"|'|$)+"
       ],
       "depNameTemplate": "minio/minio",
