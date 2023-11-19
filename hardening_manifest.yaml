@@ -8,7 +8,7 @@ tags:
 
 args:
   BASE_IMAGE: redhat/ubi/ubi9-minimal
-  BASE_TAG: "9.2"
+  BASE_TAG: "9.3"
 
 labels:
   org.opencontainers.image.title: minio
@@ -24,6 +24,16 @@ labels:
 resources:
 - tag: minio/minio:RELEASE.2023-11-15T20-43-25Z
   url: docker://docker.io/minio/minio@sha256:91866cdaad4cc11d2f86056b234f33f3768a44adc600ea37c225708c83076bc3
+- filename: authselect.rpm
+  url: https://dl.rockylinux.org/pub/rocky/9/BaseOS/x86_64/os/Packages/a/authselect-1.2.6-1.el9.x86_64.rpm
+  validation:
+    type: sha256
+    value: 4d8903aebdd33bda70550a53a5197b4bba6693004283fd7f36c760830102ba62
+- filename: authselect-libs.rpm
+  url: https://dl.rockylinux.org/pub/rocky/9/BaseOS/x86_64/os/Packages/a/authselect-libs-1.2.6-1.el9.x86_64.rpm
+  validation:
+    type: sha256
+    value: b8ee5407cb7290437179e05753bb15f65a319c6245099251ff35edeb3d9c2bb0
 
 maintainers:
 - email: ironbank@dsop.io
