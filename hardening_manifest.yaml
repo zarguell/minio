@@ -3,7 +3,7 @@ apiVersion: v1
 name: opensource/minio/minio
 
 tags:
-- RELEASE.2024-02-12T21-02-27Z
+- RELEASE.2024-02-14T21-36-02Z
 - latest
 
 args:
@@ -16,14 +16,14 @@ labels:
   org.opencontainers.image.licenses: APL-2.0
   org.opencontainers.image.url: https://github.com/minio/minio
   org.opencontainers.image.vendor: Minio
-  org.opencontainers.image.version: RELEASE.2024-02-12T21-02-27Z
+  org.opencontainers.image.version: RELEASE.2024-02-14T21-36-02Z
   mil.dso.ironbank.image.keywords: object,s3,storage
   mil.dso.ironbank.image.type: opensource
   mil.dso.ironbank.product.name: Minio
 
 resources:
-- tag: minio/minio:RELEASE.2024-02-12T21-02-27Z
-  url: docker://docker.io/minio/minio@sha256:949078cb0ec8a1702e0c296d3a4d83a2a2ab5562531d8f8073ad25f45838a408
+- tag: minio/minio:RELEASE.2024-02-14T21-36-02Z
+  url: docker://docker.io/minio/minio@sha256:7805a507df3f7c1991717096e514948a4aea4d5327336c91162de723e8771c79
 - filename: authselect.rpm
   url: https://dl.rockylinux.org/pub/rocky/9/BaseOS/x86_64/os/Packages/a/authselect-1.2.6-2.el9.x86_64.rpm
   validation:
